@@ -11,17 +11,19 @@ To run the Salary Calculator API locally, follow these steps:
    ```bash
    git clone <repository_url>
    cd salary-calculator
+   ```
 
-## Install Dependencies
+2. **Install Dependencies**
 
-Make sure you have Node.js and npm installed on your machine. You can download them from [nodejs.org](https://nodejs.org/).
+   Ensure you have Node.js and npm installed on your machine. You can download them from [nodejs.org](https://nodejs.org/).
 
-To install the required dependencies for this project, run the following command:
+   To install the required dependencies for this project, run the following command:
 
-```bash
-npm install
+   ```bash
+   npm install
+   ```
 
-## API Usage
+3. **API Usage**
 
 ### Endpoint
 
@@ -29,20 +31,19 @@ npm install
 
   Calculates the gross salary based on the provided desired net salary and allowances.
 
-### Request Body
+#### Request Body
 
 ```json
 {
   "desiredNetSalary": 3000,
   "allowances": 500
 }
-
-### Request Body
+```
 
 - `desiredNetSalary` (number, required): The net salary that the employee desires to receive.
 - `allowances` (number, required): Additional allowances added to the basic salary for taxation purposes.
 
-### Response
+#### Response
 
 The API responds with a JSON object containing the calculated gross salary and related details:
 
@@ -54,6 +55,7 @@ The API responds with a JSON object containing the calculated gross salary and r
   "employeePension": 275,
   "employerPension": 650
 }
+```
 
 ### Example
 
@@ -63,8 +65,9 @@ The API responds with a JSON object containing the calculated gross salary and r
 curl -X POST http://localhost:3000/calculate-gross-salary \
   -H "Content-Type: application/json" \
   -d '{"desiredNetSalary":3000,"allowances":500}'
+```
 
-## Using Postman:
+#### Using Postman:
 
 1. Open Postman and create a new **POST** request.
 2. Set the URL to `http://localhost:3000/calculate-gross-salary`.
@@ -76,7 +79,9 @@ curl -X POST http://localhost:3000/calculate-gross-salary \
   "desiredNetSalary": 3000,
   "allowances": 500
 }
-Click Send to send the request and view the response.
+```
+
+5. Click `Send` to send the request and view the response.
 
 ## Testing
 
@@ -84,6 +89,7 @@ Unit tests are included in the project to ensure the correctness of the salary c
 
 ```bash
 npm test
+```
 
 ## Dependencies
 
@@ -94,6 +100,4 @@ npm test
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-
 
